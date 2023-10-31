@@ -1,0 +1,204 @@
+html {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.number {
+  text-align: end;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+}
+
+.shadow-light {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+header {
+  width: 100%;
+  padding: 16px;
+}
+
+body > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+header * {
+  margin-bottom: 0 !important;
+}
+
+.nav-logo {
+  margin-top: 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.form-control,
+.form-group {
+  position: relative;
+  height: max-content;
+  margin-bottom: max(8px, 0.8rem);
+  width: 100%;
+}
+
+.form-control > label {
+  position: absolute;
+  left: max(8px, 0.8rem);
+  top: max(8px, 0.8rem);
+  height: max-content;
+  margin: auto;
+  background-color: white;
+  padding: 0 4px;
+  transition: top 100ms ease-in-out 0s;
+}
+
+.form-control > .input {
+  padding: max(8px, 0.8rem);
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.input:focus + label,
+.input.used + label {
+  top: calc(max(4px, 0.4rem) * -1);
+}
+
+.form-group > label {
+  padding: max(4px, 0.4rem);
+  display: block;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.form-group > .input[type="checkbox"] {
+  display: none;
+}
+
+.input[type="checkbox"] + .toggle-display {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: max(60px, 3rem);
+  height: max(1.8rem, 18px);
+  transform-origin: right;
+  background: #b8b8b8;
+  border-radius: 6px;
+  z-index: -1;
+  transition: background-color 100ms ease-out 0s;
+}
+
+.input[type="checkbox"].used + .toggle-display {
+  background-color: rgb(32, 209, 106);
+}
+
+.toggle-display::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: max(6px, 0.4rem);
+  margin: auto;
+  width: max(1.2rem, 12px);
+  height: max(1.2rem, 12px);
+  border-radius: 4px;
+  background: #fff;
+  transition: left 100ms ease-out 0s;
+}
+
+.input[type="checkbox"].used + .toggle-display::after {
+  left: calc(100% - max(6px, 0.4rem) - max(1.2rem, 12px));
+}
+
+.btn {
+  background-color: gray;
+  border: 1px solid gray;
+  padding: max(0.4rem, 4px) max(0.8rem, 8px);
+  border-radius: 4px;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #5e5e5e;
+  text-align: center;
+}
+
+.btn-light {
+  background-color: rgba(227, 227, 227, 75%);
+  color: black;
+  border: none;
+}
+
+.btn-light:hover {
+  background-color: rgba(192, 192, 192, 75%);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.text-center {
+  text-align: center;
+  margin: auto !important;
+}
+
+.text-end {
+  width: 100%;
+  text-align: end;
+}
+
+#form-portal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: min(100%, 400px);
+  background: white;
+  padding: max(16px, 1.6rem);
+  transform: translateX(min(100%, 400px));
+  transition: transform 250ms ease-out 0s;
+}
+
+#form-portal[data-opened="true"] {
+  transform: translateX(0);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 max(16px, 1.6rem);
+}
+
+.between {
+  justify-content: space-between;
+}
+
+#shelf {
+  gap: max(8px, 0.8rem);
+}
+
+.card {
+  padding: max(16px, 1.6rem);
+  border-radius: 4px;
+  border: 1px solid #e3e3e3;
+  flex: 1 0 min-content;
+}
+
+th {
+  text-align: start;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Library</title>
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header class="shadow-light">
+      <div class="container between">
+        <div class="text-center">
+          <h1 class="nav-logo">Library</h1>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="text-end">
+        <button type="button" class="btn portal-toggle">Add Book</button>
+      </div>
+    </div>
+    <div id="shelf" class="container"></div>
+    <div id="form-portal" data-opened="false" class="shadow">
+      <div class="relative">
+        <button type="button" class="btn btn-light portal-toggle absolute">
+          &lt; Back
+        </button>
+        <h1 class="nav-logo">New Book</h1>
+      </div>
+      <form id="register-book">
+        <div class="form-control">
+          <input
+            autocomplete="off"
+            class="input"
+            type="text"
+            name="author"
+            id="author-input"
+          />
+          <label for="author-input">Author</label>
+        </div>
+        <div class="form-control">
+          <input
+            autocomplete="off"
+            class="input"
+            type="text"
+            name="title"
+            id="title-input"
+          />
+          <label for="title-input">Title</label>
+        </div>
+        <div class="form-control">
+          <input
+            autocomplete="off"
+            class="input"
+            type="number"
+            name="pages"
+            id="pages-input"
+          />
+          <label for="pages-input">Page Count</label>
+        </div>
+        <div class="form-group">
+          <label for="read-input">Read</label>
+          <input
+            class="input toggle"
+            type="checkbox"
+            name="read"
+            id="read-input"
+          />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn">Add Book</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/styles.js"></script>
+  </body>
+</html>
